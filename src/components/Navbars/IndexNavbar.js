@@ -16,7 +16,11 @@ export default function Navbar(props) {
               to="/"
               className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             >
-              Notus React
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tq-mvp.appspot.com/o/images%2Flogo_tq.png?alt=media&token=1b12c51c-7fff-4822-8031-957e027d7d36"
+                alt="Travelers Q"
+                className="w-6/12 sm:w-4/12 px-4 rounded-full max-w-200-px h-auto align-middle border-none"
+              />
             </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
