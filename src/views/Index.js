@@ -40,12 +40,16 @@ export default function Index() {
             </div>
           </div>
         </div>
-        
-          <img
+        <img src="https://firebasestorage.googleapis.com/v0/b/tq-mvp.appspot.com/o/images%2Fbg_mainsection.png?alt=media&token=46e68fa0-2154-4524-ba62-81a5812087b9" 
+        className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
+        alt="Events Management" 
+        />
+        {/*  <img
           className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
           src={require("assets/img/pattern_react.png").default}
           alt="Events Management"
         />
+        */}
         
       </section>
 

@@ -11,7 +11,7 @@ import Admin from "layouts/Admin.js";
 import Auth from "layouts/Auth.js";
 
 // views without layouts
-
+import About from "views/About.js";
 import Landing from "views/Landing.js";
 import Profile from "views/Profile.js";
 import Events from "views/Events.js";
@@ -24,6 +24,7 @@ ReactDOM.render(
       <Route path="/admin" component={Admin} />
       <Route path="/auth" component={Auth} />
       {/* add routes without layouts */}
+      <Route path="/about" exact component={About} />
       <Route path="/events" exact component={Events} />
       <Route path="/landing" exact component={Landing} />
       <Route path="/profile" exact component={Profile} />

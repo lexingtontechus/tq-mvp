@@ -20,7 +20,7 @@ export default function Navbar(props) {
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/tq-mvp.appspot.com/o/images%2Flogo_tq.png?alt=media&token=1b12c51c-7fff-4822-8031-957e027d7d36"
-                alt={ SITENAME }
+                alt={SITENAME}
                 className="w-6/12 sm:w-4/12 px-4 rounded-full max-w-200-px h-auto align-middle border-none"
               />
             </Link>
@@ -82,8 +82,8 @@ export default function Navbar(props) {
                   href="https://github.com/creativetimofficial/notus-react?ref=nr-auth-navbar"
                   target="_blank"
                 >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-github text-lg leading-lg " />
-                  <span className="lg:hidden inline-block ml-2">Star</span>
+                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-instagram-square text-lg leading-lg " />
+                  <span className="lg:hidden inline-block ml-2">Instagram</span>
                 </a>
               </li>
 

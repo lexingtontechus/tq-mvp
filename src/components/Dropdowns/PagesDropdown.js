@@ -81,7 +81,7 @@ const PagesDropdown = () => {
             "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400"
           }
         >
-          Auth Layout
+          My Account
         </span>
         <Link
           to="/auth/login"
@@ -105,7 +105,7 @@ const PagesDropdown = () => {
             "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400"
           }
         >
-          No Layout
+          Travelers Q
         </span>
         <Link
           to="/events"
@@ -116,12 +116,12 @@ const PagesDropdown = () => {
           Events
         </Link>
         <Link
-          to="/profile"
+          to="/about"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Profile
+          About
         </Link>
       </div>
     </>

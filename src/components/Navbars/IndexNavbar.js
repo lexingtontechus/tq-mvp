@@ -15,7 +15,7 @@ export default function Navbar(props) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
-              to="/events"
+              to="/"
               className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             >
               <img
@@ -82,8 +82,8 @@ export default function Navbar(props) {
                   href="https://instagram.com/travelersq?ref=nr-index-navbar"
                   target="_blank"
                 >
-                  <i className="text-blueGray-400 fab fa-instagram text-lg leading-lg " />
-                  <span className="lg:hidden inline-block ml-2">Star</span>
+                  <i className="text-blueGray-400 fab fa-instagram-square text-lg leading-lg " />
+                  <span className="lg:hidden inline-block ml-2">Instagram</span>
                 </a>
               </li>
 
