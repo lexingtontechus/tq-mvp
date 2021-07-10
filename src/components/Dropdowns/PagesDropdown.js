@@ -9,7 +9,7 @@ const PagesDropdown = () => {
   const popoverDropdownRef = React.createRef();
   const openDropdownPopover = () => {
     createPopper(btnDropdownRef.current, popoverDropdownRef.current, {
-      placement: "bottom-start",
+      placement: "bottom-start"
     });
     setDropdownPopoverShow(true);
   };
@@ -27,7 +27,7 @@ const PagesDropdown = () => {
           dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
         }}
       >
-        Demo Pages
+        Menu
       </a>
       <div
         ref={popoverDropdownRef}
@@ -108,12 +108,12 @@ const PagesDropdown = () => {
           No Layout
         </span>
         <Link
-          to="/landing"
+          to="/events"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Landing
+          Events
         </Link>
         <Link
           to="/profile"

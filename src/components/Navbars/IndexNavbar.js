@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
 
+const SITENAME = "Travelers Q";
+
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
@@ -13,12 +15,12 @@ export default function Navbar(props) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
-              to="/"
+              to="/events"
               className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/tq-mvp.appspot.com/o/images%2Flogo_tq.png?alt=media&token=1b12c51c-7fff-4822-8031-957e027d7d36"
-                alt="Travelers Q"
+                alt={SITENAME}
                 className="w-6/12 sm:w-4/12 px-4 rounded-full max-w-200-px h-auto align-middle border-none"
               />
             </Link>
@@ -41,10 +43,10 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index-navbar"
+                  href="/events"
                 >
-                  <i className="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2" />{" "}
-                  Docs
+                  <i className="text-blueGray-400 fas fa-calendar text-lg leading-lg mr-2" />{" "}
+                  Events
                 </a>
               </li>
             </ul>
@@ -55,7 +57,7 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-react%2F%23%2F"
+                  href="https://www.facebook.com/travelersq"
                   target="_blank"
                 >
                   <i className="text-blueGray-400 fab fa-facebook text-lg leading-lg " />
@@ -77,10 +79,10 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index-navbar"
+                  href="https://instagram.com/travelersq?ref=nr-index-navbar"
                   target="_blank"
                 >
-                  <i className="text-blueGray-400 fab fa-github text-lg leading-lg " />
+                  <i className="text-blueGray-400 fab fa-instagram text-lg leading-lg " />
                   <span className="lg:hidden inline-block ml-2">Star</span>
                 </a>
               </li>
