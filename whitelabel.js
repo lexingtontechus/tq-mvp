@@ -1,3 +1,0 @@
-
-
-const SITENAME = ["Travelers Q"];

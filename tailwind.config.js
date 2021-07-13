@@ -2,6 +2,7 @@ const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
+  darkMode: "class",
   purge: {
     enabled: true,
     content: [
@@ -12,29 +13,29 @@ module.exports = {
       "./src/**/*.html",
       "./src/*.html",
       "./public/**/*.js",
-      "./public/*.js",
+      "./public/*.js"
     ],
     options: {
-      safelist: [],
-    },
+      safelist: []
+    }
   },
   theme: {
     colors: {
-      ...colors,
+      ...colors
     },
     extend: {
       minHeight: {
-        "screen-75": "75vh",
+        "screen-75": "75vh"
       },
       fontSize: {
-        55: "55rem",
+        55: "55rem"
       },
       opacity: {
-        80: ".8",
+        80: ".8"
       },
       zIndex: {
         2: 2,
-        3: 3,
+        3: 3
       },
       inset: {
         "-100": "-100%",
@@ -51,17 +52,17 @@ module.exports = {
         "145-px": "145px",
         "195-px": "195px",
         "210-px": "210px",
-        "260-px": "260px",
+        "260-px": "260px"
       },
       height: {
         "95-px": "95px",
         "70-px": "70px",
         "350-px": "350px",
         "500-px": "500px",
-        "600-px": "600px",
+        "600-px": "600px"
       },
       maxHeight: {
-        "860-px": "860px",
+        "860-px": "860px"
       },
       maxWidth: {
         "100-px": "100px",
@@ -70,16 +71,16 @@ module.exports = {
         "180-px": "180px",
         "200-px": "200px",
         "210-px": "210px",
-        "580-px": "580px",
+        "580-px": "580px"
       },
       minWidth: {
         "140-px": "140px",
-        48: "12rem",
+        48: "12rem"
       },
       backgroundSize: {
-        full: "100%",
-      },
-    },
+        full: "100%"
+      }
+    }
   },
   variants: [
     "responsive",
@@ -93,7 +94,7 @@ module.exports = {
     "focus",
     "active",
     "visited",
-    "disabled",
+    "disabled"
   ],
   plugins: [
     require("@tailwindcss/forms"),
@@ -101,44 +102,44 @@ module.exports = {
       const screens = theme("screens", {});
       addComponents([
         {
-          ".container": { width: "100%" },
+          ".container": { width: "100%" }
         },
         {
           [`@media (min-width: ${screens.sm})`]: {
             ".container": {
-              "max-width": "640px",
-            },
-          },
+              "max-width": "640px"
+            }
+          }
         },
         {
           [`@media (min-width: ${screens.md})`]: {
             ".container": {
-              "max-width": "768px",
-            },
-          },
+              "max-width": "768px"
+            }
+          }
         },
         {
           [`@media (min-width: ${screens.lg})`]: {
             ".container": {
-              "max-width": "1024px",
-            },
-          },
+              "max-width": "1024px"
+            }
+          }
         },
         {
           [`@media (min-width: ${screens.xl})`]: {
             ".container": {
-              "max-width": "1280px",
-            },
-          },
+              "max-width": "1280px"
+            }
+          }
         },
         {
           [`@media (min-width: ${screens["2xl"]})`]: {
             ".container": {
-              "max-width": "1280px",
-            },
-          },
-        },
+              "max-width": "1280px"
+            }
+          }
+        }
       ]);
-    }),
-  ],
+    })
+  ]
 };
