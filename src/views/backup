@@ -1,12 +1,28 @@
+<ul className="list-group mb-3">
+                  {this.state.events.map((events) => (
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                      <div>
+                        <Link to={`/show/${events.key}`}>
+                          <h6 class="my-0">{events.name}</h6>
+                        </Link>
+                        <small class="text-muted">{events.description}</small>
+                      </div>
+                      <span class="text-muted">{events.location_name}</span>
+                    </li>
+                  ))}
+                </ul>
+
+
+
 import React, { Component } from "react";
-import firebase from "../firebase";
+import db, { firebase } from "../firebase";
 import { Link } from "react-router-dom";
 
 class Show extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      board: {},
+      events: {},
       key: ""
     };
   }
@@ -14,12 +30,12 @@ class Show extends Component {
   componentDidMount() {
     const ref = firebase
       .firestore()
-      .collection("clients")
+      .collection("events")
       .doc(this.props.match.params.id);
     ref.get().then((doc) => {
       if (doc.exists) {
         this.setState({
-          client: doc.data(),
+          events: doc.data(),
           key: doc.id,
           isLoading: false
         });
@@ -32,7 +48,7 @@ class Show extends Component {
   delete(id) {
     firebase
       .firestore()
-      .collection("clients")
+      .collection("events")
       .doc(id)
       .delete()
       .then(() => {
@@ -50,17 +66,17 @@ class Show extends Component {
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <Link to="/">Clients</Link>
+              <Link to="/">Events</Link>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-              {this.state.board.firstname}
+              {this.state.events.name}
             </li>
           </ol>
         </nav>
         <div class="py-5">
-          <h1>{this.state.client.firstname}</h1>
-          <p class="lead">{this.state.client.email}</p>
-          <p>{this.state.client.phone}</p>
+          <h1>{this.state.events.name}</h1>
+          <p class="lead">{this.state.events.location_name}</p>
+          <p>{this.state.events.date_start}</p>
         </div>
 
         <div class="panel panel-default">

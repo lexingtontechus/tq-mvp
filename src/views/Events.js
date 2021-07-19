@@ -1,6 +1,15 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/alt-text */
+
 import React from "react";
 import { Link } from "react-router-dom";
-
+import {
+  sitename,
+  sitedomain,
+  sitepowered,
+  sitepowereddomain,
+  sitelogo
+} from "/src/whitelabel";
 // components
 
 import Navbar from "components/Navbars/AuthNavbar.js";
@@ -15,8 +24,7 @@ export default function Events() {
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')",
+              backgroundImage: "url('{sitelogo}')"
             }}
           >
             <span
@@ -29,13 +37,28 @@ export default function Events() {
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
-                    Your story starts with us.
+                    Your adventure starts with us.
                   </h1>
                   <p className="mt-4 text-lg text-blueGray-200">
-                    This is a simple example of a Events Page you can build
-                    using Notus React. It features multiple CSS components based
-                    on the Tailwind CSS design system.
+                    If you want access to specialized travel bookings with
+                    exceptional customer service and VIP treatment, look to
+                    Traveler’s Q. This is what we do, and we are happy to help.
                   </p>
+                </div>
+                <div className="pr-12 md:pt-4">
+                  {/* Form */}
+                  <form className="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">
+                    <div className="relative flex w-full flex-wrap items-stretch">
+                      <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                        <i className="fas fa-search"></i>
+                      </span>
+                      <input
+                        type="text"
+                        placeholder="Search here..."
+                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
+                      />
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -70,11 +93,20 @@ export default function Events() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Awarded Agency</h6>
+                    <h6 className="text-xl font-semibold">World Fair 2021</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Divide details about your product or agency work into
-                      parts. A paragraph describing a feature will be enough.
+                      Dubai will host the world for 182 days, each one brimming
+                      with new experiences. It’ll be a time to create,
+                      collaborate and innovate. And it’s going to be fun. We’re
+                      talking eye-catching, mind-bending, taste bud-tickling,
+                      grin-inducing, good-weird, did-that-really-just-happen
+                      fun.
                     </p>
+                    <img
+                      src="https://imgr.search.brave.com/zg3NAQlA1YDxGDWYZX9vB6lo-2P8P4_uidr1Bz7TGrc/fit/800/500/no/1/aHR0cDovL2Jsb2cu/aW1vbmhvbGlkYXlz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxOS8wNC9XaGF0/LWlzLUV4cG8tMjAy/MC1pbi1EdWJhaS5q/cGc"
+                      className="w-100 h-100"
+                      alt="World Fair"
+                    />
                   </div>
                 </div>
               </div>
@@ -83,13 +115,28 @@ export default function Events() {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
-                      <i className="fas fa-retweet"></i>
+                      <i className="fas fa-route"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Free Revisions</h6>
+                    <h6 className="text-xl font-semibold">World Fair 2022</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Keep you user engaged by providing meaningful information.
-                      Remember that by this time, the user is curious.
+                      Destination Weddings <i class="fas fa-dice-d20"></i>{" "}
+                      Honeymoons <i class="fas fa-dice-d20"></i> Adventure
+                      Travel <i class="fas fa-dice-d20"></i>
+                      Group Travel <i class="fas fa-dice-d20"></i> Family
+                      Vacations <i class="fas fa-dice-d20"></i> Cruises{" "}
+                      <i class="fas fa-dice-d20"></i> Medical Tourism{" "}
+                      <i class="fas fa-dice-d20"></i> Cooking Tours
                     </p>
+                    <p className="mt-2 mb-4 text-blueGray-500">
+                      Our team has years of experience arranging large corporate
+                      group travel, luxury vacation travel, athletic tours,
+                      educational group tours, and more.
+                    </p>
+                    <img
+                      src="https://imgr.search.brave.com/zg3NAQlA1YDxGDWYZX9vB6lo-2P8P4_uidr1Bz7TGrc/fit/800/500/no/1/aHR0cDovL2Jsb2cu/aW1vbmhvbGlkYXlz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxOS8wNC9XaGF0/LWlzLUV4cG8tMjAy/MC1pbi1EdWJhaS5q/cGc"
+                      className="w-100 h-100"
+                      alt="World Fair"
+                    />
                   </div>
                 </div>
               </div>
@@ -100,11 +147,26 @@ export default function Events() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
                       <i className="fas fa-fingerprint"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Verified Company</h6>
+                    <h6 className="text-xl font-semibold">Events</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough. Keep you user engaged!
+                      Trade Shows <i class="fas fa-dice-d20"></i> Sales Meetings{" "}
+                      <i class="fas fa-dice-d20"></i> Sales Meetings{" "}
+                      <i class="fas fa-dice-d20"></i> Board Meetings{" "}
+                      <i class="fas fa-dice-d20"></i> Board Meetings{" "}
+                      <i class="fas fa-dice-d20"></i> Incentive Trips{" "}
+                      <i class="fas fa-dice-d20"></i> Incentive Trips{" "}
+                      <i class="fas fa-dice-d20"></i> Corporate Retreats{" "}
+                      <i class="fas fa-dice-d20"></i> Corporate Retreats
                     </p>
+                    <p className="mt-2 mb-4 text-blueGray-500">
+                      Whatever type of travel you need help with, Traveler’s Q
+                      is there every step of the way.
+                    </p>
+                    <img
+                      src="https://imgr.search.brave.com/zg3NAQlA1YDxGDWYZX9vB6lo-2P8P4_uidr1Bz7TGrc/fit/800/500/no/1/aHR0cDovL2Jsb2cu/aW1vbmhvbGlkYXlz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxOS8wNC9XaGF0/LWlzLUV4cG8tMjAy/MC1pbi1EdWJhaS5q/cGc"
+                      className="w-100 h-100"
+                      alt="World Fair"
+                    />
                   </div>
                 </div>
               </div>

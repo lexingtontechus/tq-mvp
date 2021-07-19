@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
-const SITENAME = "Travelers Q";
-
 export default function Index() {
   return (
     <>
@@ -40,9 +38,10 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <img src="https://firebasestorage.googleapis.com/v0/b/tq-mvp.appspot.com/o/images%2Fbg_mainsection.png?alt=media&token=46e68fa0-2154-4524-ba62-81a5812087b9" 
-        className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
-        alt="Events Management" 
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/tq-mvp.appspot.com/o/images%2Fbg_mainsection.png?alt=media&token=46e68fa0-2154-4524-ba62-81a5812087b9"
+          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
+          alt="Events Management"
         />
         {/*  <img
           className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
@@ -50,10 +49,12 @@ export default function Index() {
           alt="Events Management"
         />
         */}
-        
       </section>
 
-      <section id="Events Management" className="py-20 bg-blueGray-600 overflow-hidden">
+      <section
+        id="Events Management"
+        className="py-20 bg-blueGray-600 overflow-hidden"
+      >
         <div className="container mx-auto pb-64">
           <div className="flex flex-wrap justify-center">
             <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
@@ -84,7 +85,8 @@ export default function Index() {
             </div>
 
             <div className="w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative">
-              <i className="fab fa-compass text-blueGray-700 absolute -top-150-px -right-100 left-auto opacity-80 text-55"></i>
+              {/* Custom background */}
+              <i className="fas fa-passport text-blueGray-700 absolute -top-150-px -right-100 left-auto opacity-80 text-55"></i>
             </div>
           </div>
         </div>
@@ -116,7 +118,7 @@ export default function Index() {
             <div className="w-full text-center lg:w-8/12">
               <p className="text-4xl text-center">
                 <span role="img" aria-label="travel">
-                &#127977;
+                  &#127977;
                 </span>
               </p>
               <h3 className="font-semibold text-3xl">Host Your Own Tour</h3>

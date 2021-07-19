@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 
-import React from "react";
 import { Link } from "react-router-dom";
+import React, { Component } from "react";
+
 import {
   sitename,
   sitedomain,
@@ -10,23 +11,24 @@ import {
   sitepowereddomain,
   sitelogo
 } from "/src/whitelabel";
+
 // components
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
-import Team from "./WL_Team";
-
-export default function About() {
+import * as admin from "firebase-admin";
+import { withFirebase } from "components/Firebase";
+export default function Display() {
   return (
     <>
       <Navbar transparent />
+
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
-              backgroundImage:
-                "url('{sitelogo}')"
+              backgroundImage: "url('{sitelogo}')"
             }}
           >
             <span
@@ -47,7 +49,7 @@ export default function About() {
                     Traveler’s Q. This is what we do, and we are happy to help.
                   </p>
                 </div>
-                <div className="pr-12">
+                <div className="pr-12 md:pt-4">
                   {/* Form */}
                   <form className="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">
                     <div className="relative flex w-full flex-wrap items-stretch">
@@ -95,14 +97,20 @@ export default function About() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                       <i className="fas fa-award"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Awarded Agency</h6>
+                    <h6 className="text-xl font-semibold">World Fair 2021</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Our incredible team of travel agents has the first-hand
-                      experience and industry connections to book the most
-                      unforgettable specialty travel excursions possible. We’ll
-                      you the best accommodations, help you negotiate the lowest
-                      prices, and arrange for every one of your needs.
+                      Dubai will host the world for 182 days, each one brimming
+                      with new experiences. It’ll be a time to create,
+                      collaborate and innovate. And it’s going to be fun. We’re
+                      talking eye-catching, mind-bending, taste bud-tickling,
+                      grin-inducing, good-weird, did-that-really-just-happen
+                      fun.
                     </p>
+                    <img
+                      src="https://imgr.search.brave.com/zg3NAQlA1YDxGDWYZX9vB6lo-2P8P4_uidr1Bz7TGrc/fit/800/500/no/1/aHR0cDovL2Jsb2cu/aW1vbmhvbGlkYXlz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxOS8wNC9XaGF0/LWlzLUV4cG8tMjAy/MC1pbi1EdWJhaS5q/cGc"
+                      className="w-100 h-100"
+                      alt="World Fair"
+                    />
                   </div>
                 </div>
               </div>
@@ -113,7 +121,7 @@ export default function About() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
                       <i className="fas fa-route"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Specialty Travel</h6>
+                    <h6 className="text-xl font-semibold">World Fair 2022</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
                       Destination Weddings <i class="fas fa-dice-d20"></i>{" "}
                       Honeymoons <i class="fas fa-dice-d20"></i> Adventure
@@ -128,6 +136,11 @@ export default function About() {
                       group travel, luxury vacation travel, athletic tours,
                       educational group tours, and more.
                     </p>
+                    <img
+                      src="https://imgr.search.brave.com/zg3NAQlA1YDxGDWYZX9vB6lo-2P8P4_uidr1Bz7TGrc/fit/800/500/no/1/aHR0cDovL2Jsb2cu/aW1vbmhvbGlkYXlz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxOS8wNC9XaGF0/LWlzLUV4cG8tMjAy/MC1pbi1EdWJhaS5q/cGc"
+                      className="w-100 h-100"
+                      alt="World Fair"
+                    />
                   </div>
                 </div>
               </div>
@@ -138,7 +151,7 @@ export default function About() {
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
                       <i className="fas fa-fingerprint"></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Corporate Events</h6>
+                    <h6 className="text-xl font-semibold">Events</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
                       Trade Shows <i class="fas fa-dice-d20"></i> Sales Meetings{" "}
                       <i class="fas fa-dice-d20"></i> Sales Meetings{" "}
@@ -149,10 +162,15 @@ export default function About() {
                       <i class="fas fa-dice-d20"></i> Corporate Retreats{" "}
                       <i class="fas fa-dice-d20"></i> Corporate Retreats
                     </p>
-                    <p>
+                    <p className="mt-2 mb-4 text-blueGray-500">
                       Whatever type of travel you need help with, Traveler’s Q
                       is there every step of the way.
                     </p>
+                    <img
+                      src="https://imgr.search.brave.com/zg3NAQlA1YDxGDWYZX9vB6lo-2P8P4_uidr1Bz7TGrc/fit/800/500/no/1/aHR0cDovL2Jsb2cu/aW1vbmhvbGlkYXlz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxOS8wNC9XaGF0/LWlzLUV4cG8tMjAy/MC1pbi1EdWJhaS5q/cGc"
+                      className="w-100 h-100"
+                      alt="World Fair"
+                    />
                   </div>
                 </div>
               </div>
@@ -307,28 +325,20 @@ export default function About() {
           </div>
         </section>
 
-        <section id="Team" className="pt-20 pb-48">
+        <section className="pt-20 pb-48">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">Here are our heroes</h2>
                 <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record maximum.
+                  ...
                 </p>
               </div>
-            </div>
-            <div className="flex flex-wrap">
-              <Team />
             </div>
           </div>
         </section>
 
-        <section
-          id="Build Something"
-          className="pb-20 relative block bg-blueGray-800"
-        >
+        <section className="pb-20 relative block bg-blueGray-800">
           <div
             className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
             style={{ transform: "translateZ(0)" }}
@@ -368,7 +378,7 @@ export default function About() {
                   <i className="fas fa-medal text-xl"></i>
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
-                  Excellent Services
+                  Excelent Services
                 </h6>
                 <p className="mt-2 mb-4 text-blueGray-400">
                   Some quick example text to build on the card title and make up
@@ -402,10 +412,7 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section
-          id="contactform"
-          className="relative block py-24 lg:pt-0 bg-blueGray-800"
-        >
+        <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
               <div className="w-full lg:w-6/12 px-4">
@@ -471,13 +478,6 @@ export default function About() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-        <section id="Testing" className="pb-20 relative block bg-blueGray-800">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap">
-              <Team />
             </div>
           </div>
         </section>
