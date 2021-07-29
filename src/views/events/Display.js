@@ -16,19 +16,21 @@ import {
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
-import * as admin from "firebase-admin";
-import { withFirebase } from "components/Firebase";
+
+//Firestore
+//import DisplayEvents from "./Displayevents.js";
+
 export default function Display() {
   return (
     <>
       <Navbar transparent />
-
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
-              backgroundImage: "url('{sitelogo}')"
+              backgroundImage:
+                "url('https://firebasestorage.googleapis.com/v0/b/tq-mvp.appspot.com/o/images%2Fevent_dubai_expo.jpg?alt=media&token=4f2b3ecb-21eb-49aa-99e5-697d3c80e3ef')"
             }}
           >
             <span
@@ -48,21 +50,8 @@ export default function Display() {
                     exceptional customer service and VIP treatment, look to
                     Traveler’s Q. This is what we do, and we are happy to help.
                   </p>
-                </div>
-                <div className="pr-12 md:pt-4">
-                  {/* Form */}
-                  <form className="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">
-                    <div className="relative flex w-full flex-wrap items-stretch">
-                      <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
-                        <i className="fas fa-search"></i>
-                      </span>
-                      <input
-                        type="text"
-                        placeholder="Search here..."
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
-                      />
-                    </div>
-                  </form>
+                  
+                  <p className="mt-4 text-lg text-blueGray-200">Events List</p>
                 </div>
               </div>
             </div>

@@ -15,7 +15,7 @@ import {
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
-export default function Events() {
+export default function Eventdetails() {
   return (
     <>
       <Navbar transparent />
@@ -37,10 +37,10 @@ export default function Events() {
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
-                    Your adventure starts here.
+                    Your adventure starts with us.
                   </h1>
                   <p className="mt-4 text-lg text-blueGray-200">
-                   Current Events
+                    If you want access to specialized travel bookings with exceptional customer service and VIP treatment,look to Traveler’s Q. This is what we do, and we are happy to help.
                   </p>
                 </div>
               </div>
@@ -66,22 +66,23 @@ export default function Events() {
             </svg>
           </div>
         </div>
-
+    {/*Event-Product Details */}
         <section className="pb-20 bg-blueGray-200 -mt-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
-              <div class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
+              <div id="Event Details" class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
                 <div class="container mx-auto px-6 flex relative py-16">
                   <div class="sm:w-2/3 lg:w-2/5 flex flex-col relative z-20">
                     <span class="w-20 h-2 bg-gray-800 dark:bg-white mb-12"></span>
+                    {/*Product Name */}
                     <h1 class="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-gray-800">
-                      Expo 2020
-                      <span class="text-5xl sm:text-7xl">Dubai UAE</span>
+                      Executive Single Suite
+                      {/*Product Tag */}
+                      <span class="text-5xl sm:text-7xl">"The Atrium" featuring Pacific Ocean views</span>
                     </h1>
+                    {/*Event Descriptuon */}
                     <p class="text-sm sm:text-base text-gray-700 dark:text-white">
-                      Dimension of reality that makes change possible and
-                      understandable. An indefinite and homogeneous environment
-                      in which natural events and human existence take place.
+                    Expo 2020 Dubai will host the world for 182 days, each one brimming with new experiences. It’ll be a time to create, collaborate and innovate. And it’s going to be fun. We’re talking eye-catching, mind-bending, taste bud-tickling, grin-inducing, good-weird, did-that-really-just-happen fun.
                     </p>
                     <div class="flex mt-8">
                       <a
@@ -90,17 +91,11 @@ export default function Events() {
                       >
                         Register
                       </a>
-                      <a
-                        href="#"
-                        class="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-pink-500 text-pink-500 dark:text-white hover:bg-pink-500 hover:text-white text-md"
-                      >
-                        Read more
-                      </a>
                     </div>
                   </div>
                   <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
                     <img
-                      src="https://imgr.search.brave.com/zg3NAQlA1YDxGDWYZX9vB6lo-2P8P4_uidr1Bz7TGrc/fit/800/500/no/1/aHR0cDovL2Jsb2cu/aW1vbmhvbGlkYXlz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxOS8wNC9XaGF0/LWlzLUV4cG8tMjAy/MC1pbi1EdWJhaS5q/cGc"
+                      src="https://firebasestorage.googleapis.com/v0/b/tq-mvp.appspot.com/o/products%2Fbigstock-Hotel-Bed-1653767.jpg?alt=media&token=84727992-2437-4629-844d-7b2807de9bce"
                       class="max-w-xs md:max-w-sm m-auto"
                     />
                   </div>

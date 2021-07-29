@@ -26,7 +26,7 @@ export default function About() {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('{sitelogo}')"
+                "url('https://firebasestorage.googleapis.com/v0/b/tq-mvp.appspot.com/o/images%2Ftq_corporate_travel.jpg?alt=media&token=df66d28f-fdc4-4847-846c-03ba37fafd98')"
             }}
           >
             <span
